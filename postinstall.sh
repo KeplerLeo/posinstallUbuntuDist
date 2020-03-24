@@ -37,6 +37,9 @@ PROGRAMAS_PARA_INSTALAR=(
   acpi-call-dkms
   tp-smapi-dkms
   tlpui
+  default-jdk
+  git
+  maven
 )
 # ---------------------------------------------------------------------- #
 
