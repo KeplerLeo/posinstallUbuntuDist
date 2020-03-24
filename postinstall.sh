@@ -11,8 +11,15 @@ URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_curre
 DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
 
 PROGRAMAS_PARA_INSTALAR=(
-  snapd
+  synaptic
+  ubuntu-restricted-extras
   gnome-tweaks
+  python3
+  python-pip
+  build-essential 
+  libssl-dev 
+  flatpak 
+  gnome-software-plugin-flatpak
   guvcview
   virtualbox
   steam-installer
@@ -86,13 +93,13 @@ done
 
 sudo apt install --install-recommends winehq-stable wine-stable wine-stable-i386 wine-stable-amd64 -y
 
-## Instalando pacotes Flatpak ##
-# flatpak install flathub com.obsproject.Studio -y
+## Instalando repositório flathub ##
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && 
 
 ## Instalando pacotes Snap ##
 sudo snap install spotify
 sudo snap install discord
-sudo snap install code
+sudo snap install code --classic
 sudo snap install photogimp
 sudo snap install riot-web
 # ---------------------------------------------------------------------- #
@@ -104,3 +111,4 @@ flatpak update
 sudo apt autoclean
 sudo apt autoremove -y
 # ---------------------------------------------------------------------- #
+echo "Fim"
