@@ -47,6 +47,10 @@ PROGRAMAS_PARA_INSTALAR=(
   default-jdk
   git
   maven
+  meson 
+  sassc 
+  libglib2.0-dev 
+  libxml2-utils
 )
 # ---------------------------------------------------------------------- #
 
@@ -102,7 +106,14 @@ sudo snap install discord
 sudo snap install code --classic
 sudo snap install photogimp
 sudo snap install riot-web
+
+## Instalando Yaru Theme ##
 # ---------------------------------------------------------------------- #
+git clone https://github.com/ubuntu/yaru
+cd yaru
+meson build
+cd build
+sudo ninja install
 
 # ----------------------------- PÓS-INSTALAÇÃO ----------------------------- #
 ## Finalização, atualização e limpeza##
@@ -112,3 +123,5 @@ sudo apt autoclean
 sudo apt autoremove -y
 # ---------------------------------------------------------------------- #
 echo "Fim"
+
+sudo reboot
